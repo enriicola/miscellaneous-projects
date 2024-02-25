@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/zsh
 
 git pull
 
@@ -8,7 +8,14 @@ git add *
 # read commitMessage
 # git commit -a "$commitMessage"
 
-git commit -am "enrico's script push"
+if [ $# -eq 0 ]
+    then
+        msg="enrico's script push"
+    else
+        msg=$1
+fi
+
+git commit -am "$msg"
 
 # echo 'Enter the name of the branch:'
 # read branch
