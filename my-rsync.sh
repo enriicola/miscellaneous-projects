@@ -27,7 +27,7 @@ cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 # (find . -type f -exec brctl evict {} \;) | grep "Unable"
 
 
-osascript -e 'tell application "Terminal" to quit'
+# osascript -e 'tell application "Terminal" to quit'
 
 
 
