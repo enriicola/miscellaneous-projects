@@ -24,7 +24,7 @@ cd $HOME/Desktop/unige-git; echo "\n-> $PWD"; +mgp
 # find . -type f -exec brctl evict {} \;
 
 
-osascript -e 'tell application "Terminal" to quit'
+# osascript -e 'tell application "Terminal" to quit'
 
 
 
