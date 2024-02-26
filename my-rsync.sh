@@ -20,8 +20,8 @@ cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 
 
-# cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
-# find . -type f -exec brctl evict {} \;
+cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
+find . -type f -exec brctl evict {} \;
 
 
 osascript -e 'tell application "Terminal" to quit'
