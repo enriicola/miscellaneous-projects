@@ -7,11 +7,11 @@ source=${h}/Desktop/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
 
 excluded_folders=( '*git' 'AutoMac' 'tinder*' 'miscellaneous*')
-rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --exclude "${excluded_folders[3]}" --delete "$source" "$destination" | grep 'err'
+rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --exclude "${excluded_folders[3]}" --delete --dry-run "$source" "$destination" | grep 'err'
 
 source=${h}/Documents/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
-rsync -avh --delete "$source" "$destination" | grep 'err'
+rsync -avh --delete --dry-run "$source" "$destination" | grep 'err'
 
 cd $HOME/Desktop/AutoMac; echo "\n-> $PWD"; +mgp
 cd $HOME/Desktop/calvino-git; echo "\n-> $PWD"; +mgp
