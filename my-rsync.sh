@@ -13,11 +13,11 @@ source=${h}/Documents/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
 rsync -avh --delete --dry-run "$source" "$destination" | grep 'err'
 
-cd $HOME/Desktop/AutoMac; echo "\nautomac"; +mgp
-cd $HOME/Desktop/calvino-git; echo "\ncalvino"; +mgp
-cd $HOME/Desktop/miscellaneous-projects; echo "\nmiscellaneous"; +mgp
-cd $HOME/Desktop/tinder-swipe-bot; echo "\ntinder"; +mgp
-cd $HOME/Desktop/unige-git; echo "\nunige"; +mgp
+cd $HOME/Desktop/AutoMac; echo "\n->automac"; +mgp
+cd $HOME/Desktop/calvino-git; echo "\n->calvino"; +mgp
+cd $HOME/Desktop/miscellaneous-projects; echo "\n->miscellaneous"; +mgp
+cd $HOME/Desktop/tinder-swipe-bot; echo "\n->tinder"; +mgp
+cd $HOME/Desktop/unige-git; echo "\n->unige"; +mgp
 
 
 # cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
