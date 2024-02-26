@@ -4,7 +4,7 @@ smartctl -a disk0 | grep "Data Units Written"
 
 h=$HOME
 source=${h}/Desktop/
-destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/
+destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
 
 excluded_folders=( '*git' 'AutoMac' 'tinder*' 'miscellaneous*')
 rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --exclude "${excluded_folders[3]}" --delete "$source" "$destination" | grep 'err'
