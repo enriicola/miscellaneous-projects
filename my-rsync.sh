@@ -2,9 +2,17 @@
 
 smartctl -a disk0 | grep "Data Units Written"
 
-rsync -av --exclude='/Users/enrico/Desktop/AutoMac/automations' --delete --dry-run $HOME/Desktop/AutoMac $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/ | grep "automations"
+h=$HOME
+source=${h}/Desktop/
+destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/
 
-# rsync -av --delete $HOME/Documents/ $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents
+excluded_folders=( '*git' 'AutoMac' 'tinder*' 'miscellaneous*')
+rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --exclude "${excluded_folders[3]}" --delete --dry-run "$source" "$destination" | grep 'err'
+
+source=${h}/Documents/
+destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
+rsync -avh --delete --dry-run "$source" "$destination" | grep 'err'
+
 cd $HOME/Desktop/AutoMac; +mgp
 cd $HOME/Desktop/calvino-git; +mgp
 cd $HOME/Desktop/miscellaneous-projects; +mgp
