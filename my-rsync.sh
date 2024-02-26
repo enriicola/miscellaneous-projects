@@ -13,7 +13,7 @@ source=${h}/Documents/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
 rsync -avh --delete "$source" "$destination" | grep 'err\|delete'
 
-cd $HOME/Desktop/AutoMac; echo "\n-> $PWD"; +mgp
+cd $HOME/Desktop/AutoMac; echo "\n\1-> $PWD"; +mgp
 cd $HOME/Desktop/calvino-git; echo "\n-> $PWD"; +mgp
 cd $HOME/Desktop/miscellaneous-projects; echo "\n-> $PWD"; +mgp
 cd $HOME/Desktop/tinder-swipe-bot; echo "\n-> $PWD"; +mgp
