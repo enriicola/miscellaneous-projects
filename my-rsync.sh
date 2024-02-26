@@ -20,11 +20,11 @@ cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 
 
-brctl evict  $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
+# brctl evict  $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
 # (find . -type f -exec brctl evict {} \;) | grep "Unable"
 
 
-# osascript -e 'tell application "Terminal" to quit'
+osascript -e 'tell application "Terminal" to quit'
 
 
 
