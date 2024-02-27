@@ -20,7 +20,7 @@ cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 
 
-# brctl evict  $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
+brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
     # brctl download [FilePathHere]
     # brctl evict [FilePathHere]
 
