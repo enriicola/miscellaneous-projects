@@ -13,6 +13,10 @@ source=${h}/Documents/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
 rsync -avh --delete "$source" "$destination" | grep 'err\|delete'
 
+source=${h}/Music/
+destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Music/
+rsync -avh --delete "$source" "$destination" | grep 'err\|delete'
+
 cd $HOME/Desktop/AutoMac; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/calvino-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/iPhone-Shortcuts; echo "\033[1m \n-> $PWD \033[0m"; +mgp
