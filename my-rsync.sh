@@ -31,7 +31,7 @@ brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
 
 # (find . -type f -exec brctl evict {} \;) | grep "Unable"
 
-osascript -e 'tell application "Terminal" to quit'
+# osascript -e 'tell application "Terminal" to quit'
 
 
 

@@ -86,7 +86,9 @@ cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-&gt; $PWD \033[0m"; +mgp
 cd $HOME/Desktop/unige-git; echo "\033[1m \n-&gt; $PWD \033[0m"; +mgp
 
 
-brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/</string>
+brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
+
+touch $HOME/Desktop/PIPPO2</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -199,7 +201,7 @@ brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>309.000000:252.000000</string>
+				<string>321.000000:631.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
