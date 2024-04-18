@@ -3,10 +3,11 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>my.rsync</string>
+    <string>touch.pippo</string>
     <key>ProgramArguments</key>
     <array>
-      <string>my-rsync</string>
+      <string>touch</string>
+      <string>$HOME/Desktop/pippo</string>
     </array>
     <key>StartCalendarInterval</key>
     <array>
@@ -14,16 +15,8 @@
         <key>Hour</key>
         <integer>15</integer>
         <key>Minute</key>
-        <integer>22</integer>
+        <integer>40</integer>
       </dict>
     </array>
   </dict>
 </plist>
-
-<!-- 
-echo downloading launched.my.rsync.plist...
-mkdir -p ~/Library/LaunchAgents
-curl -o ~/Library/LaunchAgents/launched.my.rsync.plist https://launched.zerowidth.com/plists/_DOIqzI9oB.xml
-echo installing launched.my.rsync.plist...
-launchctl load -w ~/Library/LaunchAgents/launched.my.rsync.plist
--->
