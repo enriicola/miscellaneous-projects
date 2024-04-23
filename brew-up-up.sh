@@ -4,4 +4,4 @@ brew update
 brew upgrade
 brew cleanup
 
-exit 0
+osascript -e 'tell application "Terminal" to quit'
