@@ -4,10 +4,6 @@ git pull
 
 git add .
 
-# echo 'Enter the commit message:'
-# read commitMessage
-# git commit -a "$commitMessage"
-
 if [ $# -eq 0 ]
     then
         msg="enrico's script push"
