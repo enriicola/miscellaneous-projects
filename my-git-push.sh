@@ -11,7 +11,7 @@ if [ $# -eq 0 ]
         msg=$1
 fi
 
-git commit -am "$msg"  
+git commit -am "$msg"
 
 # echo 'Enter the name of the branch:'
 # read branch
