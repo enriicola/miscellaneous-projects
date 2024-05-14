@@ -3,7 +3,7 @@ from secrets import api_id, api_hash
 
 #recipient = '@marcoliiin'
 #recipient = '@enricopezzano'
-recipient = '@FIONA1089'
+recipient = '@FIONA1088'
 message = 'fatto'
 image_path = '/Users/enrico/Desktop/miscellaneous-projects/telegram/pic.jpg'
 session_file = '/Users/enrico/Desktop/miscellaneous-projects/telegram/session_name'

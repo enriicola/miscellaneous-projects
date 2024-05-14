@@ -6,8 +6,8 @@ h=$HOME
 source=${h}/Desktop/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
 
-excluded_folders=( 'unige-git' 'tinder*' 'miscellaneous*' 'iPhone*')
-rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --exclude "${excluded_folders[3]}" --delete "$source" "$destination" | grep 'err\|delete'
+excluded_folders=( 'unige-git' 'miscellaneous*' 'iPhone*')
+rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --delete "$source" "$destination" | grep 'err\|delete'
 
 source=${h}/Documents/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
@@ -21,7 +21,7 @@ rsync -avh --delete --exclude Music "$source" "$destination" | grep 'err\|delete
 # cd $HOME/Desktop/calvino-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/iPhone-Shortcuts; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/miscellaneous-projects; echo "\033[1m \n-> $PWD \033[0m"; +mgp
-cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-> $PWD \033[0m"; +mgp
+# cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 
 

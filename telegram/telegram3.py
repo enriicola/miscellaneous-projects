@@ -3,7 +3,7 @@ from secrets import api_id, api_hash
 
 #recipient = '@marcoliiin'
 #recipient = '@enricopezzano'
-recipient = '@FIONA1089'
+recipient = '@Pedro567'
 message = 'fatto'
 image_path = '/Users/enrico/Desktop/miscellaneous-projects/telegram/pic.jpg'
 session_file = '/Users/enrico/Desktop/miscellaneous-projects/telegram/session_name'
@@ -26,3 +26,4 @@ if __name__ == '__main__':
     # asyncio.run(send_message())
     for i in range(n):
 	    asyncio.run(send_picture())
+
