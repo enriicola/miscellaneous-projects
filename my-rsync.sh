@@ -19,10 +19,10 @@ rsync -avh --delete --exclude Music "$source" "$destination" | grep 'err\|delete
 
 # cd $HOME/Desktop/AutoMac; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 # cd $HOME/Desktop/calvino-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
-cd $HOME/Desktop/iPhone-Shortcuts; echo "\033[1m \n-> $PWD \033[0m"; +mgp
-cd $HOME/Desktop/miscellaneous-projects; echo "\033[1m \n-> $PWD \033[0m"; +mgp; echo $? > $HOME/Desktop/miscellaneous-projects/status.txt
+cd $HOME/Desktop/iPhone-Shortcuts; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh
+cd $HOME/Desktop/miscellaneous-projects; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh; echo $? > $HOME/Desktop/miscellaneous-projects/status.txt
 # cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-> $PWD \033[0m"; +mgp
-cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
+cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh
 
 
 brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
