@@ -2,7 +2,6 @@
 
 smartctl -a disk0 | grep "Data Units Written"
 
-echo "Rsyncing desktop..."
 h=$HOME
 source=${h}/Desktop/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
@@ -10,7 +9,6 @@ destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
 excluded_folders=( 'unige-git' 'miscellaneous*' 'iPhone*')
 rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --delete "$source" "$destination" | grep 'err\|delete'
 
-echo "Rsyncing documents..."
 source=${h}/Documents/
 destination=${h}/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
 rsync -avh --delete "$source" "$destination" | grep 'err\|delete'
