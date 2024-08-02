@@ -15,7 +15,7 @@ if [ $# -eq 0 ]
 fi
 
 echo
-echo "Committing...$msg"
+echo "Committing with message: $msg"
 git commit -am "$msg"
 
 # echo 'Enter the name of the branch:'
