@@ -7,7 +7,12 @@ echo
 echo Adding...
 git add *
 
-msg="$@"
+if [ $# -eq 0 ]
+    then
+        msg="enrico's script push"
+    else
+        msg="$@"
+fi
 
 echo
 echo "Committing with message: $msg"
