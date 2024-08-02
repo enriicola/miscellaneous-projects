@@ -11,11 +11,11 @@ if [ $# -eq 0 ]
     then
         msg="enrico's script push"
     else
-        msg=$*
+        msg="$@"
 fi
 
 echo
-echo Committing...$msg
+echo "Committing...$msg"
 git commit -am "$msg"
 
 # echo 'Enter the name of the branch:'
