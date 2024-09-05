@@ -42,3 +42,6 @@ brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
 # open -a OneDrive.app
 # rsync -av $HOME/Desktop/* $HOME/Library/CloudStorage/OneDrive-unige.it
 # rsync -av $HOME/Documents/* $HOME/Library/CloudStorage/OneDrive-unige.it/Documenti
+
+#print final execution time and date
+echo "$(date)" > /Users/enrico/Library/Mobile\ Documents/com~apple~CloudDocs/last-sync.txt
