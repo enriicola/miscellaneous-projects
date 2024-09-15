@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-smartctl -a disk0 | grep "Data Units Written"
+# smartctl -a disk0 | grep "Data Units Written"
 
 h=$HOME
 source=${h}/Desktop/
