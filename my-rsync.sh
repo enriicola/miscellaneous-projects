@@ -31,6 +31,7 @@ echo $? > $HOME/Desktop/miscellaneous-projects/my-git-push-status.txt
 ùgp "rsync" "$HOME/Desktop/unige-git"
 echo $? > $HOME/Desktop/unige-git/my-git-push-status.txt
 
+echo "\n\n☁️Evicting files from iCloud Drive..."
 brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
     # brctl download [FilePathHere]
     # brctl evict [FilePathHere]
