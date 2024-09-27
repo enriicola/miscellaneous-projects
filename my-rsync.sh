@@ -2,46 +2,34 @@
 
 #smartctl -a disk0 | grep "Data Units Written"
 
-# Initialize a command to be executed later
-myrsync="rsync -avh --delete --timeout 1000 '$source' '$destination'"
-mygrep="grep 'err\|delete'"
-echo $command
-
 source=$HOME/Desktop/
-destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
-excluded_folders=( 'unige-git' 'miscellaneous*' )
+destination="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+command="rsync -avhq --timeout 1000 --delete "$source" "$destination""
 echo "🔄 Syncing Desktop..."
-$myrsync --exclude="${excluded_folders[@]}" | $mygrep
-
-exit 0
+$command --exclude unige-git --exclude miscellaneous-projects #| grep unige-git | grep miscellaneous-projects
 
 source=$HOME/Documents/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
-excluded_folders=('')
 echo "🔄 Syncing Documents..."
 $command
 
 source=$HOME/Music/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Music/
-excluded_folders=('Music')
 echo "🔄 Syncing Music..."
-$command
+$command --exclude "Music"
 
 source=$HOME/Downloads/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/
-excluded_folders=('')
 echo "🔄 Syncing Downloads..."
 $command
 
-# $HOME/Desktop/AutoMac
-# $HOME/Desktop/calvino-git
-# $HOME/Desktop/iPhone-Shortcuts
+#$HOME/Desktop/AutoMac #$HOME/Desktop/calvino-git #$HOME/Desktop/iPhone-Shortcuts
 
 ùgp "rsync" "$HOME/Desktop/miscellaneous-projects"
-echo $? > $HOME/Desktop/miscellaneous-projects/status.txt
+echo $? > $HOME/Desktop/miscellaneous-projects/my-git-push-status.txt
 
 ùgp "rsync" "$HOME/Desktop/unige-git"
-echo $? > $HOME/Desktop/unige-git/status.txt
+echo $? > $HOME/Desktop/unige-git/my-git-push-status.txt
 
 brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
     # brctl download [FilePathHere]
