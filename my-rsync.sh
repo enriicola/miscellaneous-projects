@@ -2,28 +2,61 @@
 
 #smartctl -a disk0 | grep "Data Units Written"
 
+# Initialize a command to be executed later
+command="rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --delete --timeout 1000 "$source" "$destination" | grep 'err\|delete'"
+
 source=$HOME/Desktop/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
-
 excluded_folders=( 'unige-git' 'miscellaneous*' )
-rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --delete "$source" "$destination" | grep 'err\|delete'
+echo "🔄 Syncing Desktop..."
+$command
 
 source=$HOME/Documents/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
-rsync -avh --delete "$source" "$destination" | grep 'err\|delete'
+excluded_folders=('')
+echo "🔄 Syncing Documents..."
+$command
 
 source=$HOME/Music/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Music/
-rsync -avh --delete --exclude Music "$source" "$destination" | grep 'err\|delete'
+excluded_folders=('Music')
+echo "🔄 Syncing Music..."
+$command
 
 source=$HOME/Downloads/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/
-rsync -avh --delete --exclude Music "$source" "$destination" | grep 'err\|delete'
+excluded_folders=('')
+echo "🔄 Syncing Downloads..."
+$command
 
 # cd $HOME/Desktop/AutoMac; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 # cd $HOME/Desktop/calvino-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 # cd $HOME/Desktop/iPhone-Shortcuts; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh
-cd $HOME/Desktop/miscellaneous-projects; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh; echo $? > $HOME/Desktop/miscellaneous-projects/status.txt
+
+echo Pulling...
+path="$HOME/Desktop/miscellaneous-projects"
+git -C $path pull
+
+echo
+echo Adding...
+git -C $path add *
+if [ $# -eq 0 ]
+    then
+        msg="enrico's script push"
+    else
+        msg="$@"
+fi
+echo
+echo "Committing with message: $msg"
+git -C $path commit -am "$msg"
+
+echo
+echo Pushing...
+git -C $path push
+
+
+
+cd $HOME/Desktop/miscellaneous-projects; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh #; echo $? > $HOME/Desktop/miscellaneous-projects/status.txt
 # cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh
 

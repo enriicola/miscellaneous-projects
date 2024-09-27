@@ -1,11 +1,18 @@
 #!/usr/bin/zsh
 
+if [ $# -eq 2 ]
+    then
+        path=$2
+    else
+        path="$PWD"
+fi
+
 echo Pulling...
-git pull
+git -C $path pull
 
 echo 
 echo Adding...
-git add *
+git -C $path add *
 
 if [ $# -eq 0 ]
     then
@@ -16,11 +23,11 @@ fi
 
 echo
 echo "Committing with message: $msg"
-git commit -am "$msg"
+git -C $path commit -am "$msg"
 
 # echo 'Enter the name of the branch:'
 # read branch
 
 echo
 echo Pushing...
-git push #origin $branch
+git -C $path push #origin $branch
