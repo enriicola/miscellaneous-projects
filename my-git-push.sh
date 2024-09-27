@@ -7,6 +7,8 @@ if [ $# -eq 2 ]
         path="$PWD"
 fi
 
+echo "🔄 Syncing $path..."
+
 echo Pulling...
 git -C $path pull
 
