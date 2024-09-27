@@ -20,7 +20,7 @@ if [ $# -eq 0 ]
     then
         msg="enrico's script push"
     else
-        msg="$@"
+        msg="$1"
 fi
 
 echo
