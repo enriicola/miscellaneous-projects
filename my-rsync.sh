@@ -29,32 +29,24 @@ excluded_folders=('')
 echo "🔄 Syncing Downloads..."
 $command
 
-# cd $HOME/Desktop/AutoMac; echo "\033[1m \n-> $PWD \033[0m"; +mgp
-# cd $HOME/Desktop/calvino-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
-# cd $HOME/Desktop/iPhone-Shortcuts; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh
+# $HOME/Desktop/AutoMac
+# $HOME/Desktop/calvino-git
+# $HOME/Desktop/iPhone-Shortcuts
 
 ùgp "rsync" "$HOME/Desktop/miscellaneous-projects"
+echo $? > $HOME/Desktop/miscellaneous-projects/status.txt
 
-
-
-cd $HOME/Desktop/miscellaneous-projects; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh #; echo $? > $HOME/Desktop/miscellaneous-projects/status.txt
-# cd $HOME/Desktop/tinder-swipe-bot; echo "\033[1m \n-> $PWD \033[0m"; +mgp
-cd $HOME/Desktop/unige-git; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh
-
+ùgp "rsync" "$HOME/Desktop/unige-git"
+echo $? > $HOME/Desktop/unige-git/status.txt
 
 brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
     # brctl download [FilePathHere]
     # brctl evict [FilePathHere]
-
+    
 # (find . -type f -exec brctl evict {} \;) | grep "Unable"
 
-# osascript -e 'tell application "Terminal" to quit'
-
-
-
-# open -a OneDrive.app
-# rsync -av $HOME/Desktop/* $HOME/Library/CloudStorage/OneDrive-unige.it
-# rsync -av $HOME/Documents/* $HOME/Library/CloudStorage/OneDrive-unige.it/Documenti
 
 #print final execution time and date
 echo "$(date)" > /Users/enrico/Library/Mobile\ Documents/com~apple~CloudDocs/last-sync.txt
+
+# osascript -e 'tell application "Terminal" to quit'
