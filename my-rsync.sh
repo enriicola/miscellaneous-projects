@@ -33,26 +33,7 @@ $command
 # cd $HOME/Desktop/calvino-git; echo "\033[1m \n-> $PWD \033[0m"; +mgp
 # cd $HOME/Desktop/iPhone-Shortcuts; echo "\033[1m \n-> $PWD \033[0m"; sh $HOME/Desktop/miscellaneous-projects/my-git-push.sh
 
-echo Pulling...
-path="$HOME/Desktop/miscellaneous-projects"
-git -C $path pull
-
-echo
-echo Adding...
-git -C $path add *
-if [ $# -eq 0 ]
-    then
-        msg="enrico's script push"
-    else
-        msg="$@"
-fi
-echo
-echo "Committing with message: $msg"
-git -C $path commit -am "$msg"
-
-echo
-echo Pushing...
-git -C $path push
+ùgp "rsync" "$HOME/Desktop/miscellaneous-projects"
 
 
 
