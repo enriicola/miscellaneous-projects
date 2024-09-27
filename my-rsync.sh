@@ -8,20 +8,20 @@ command="rsync -avhq --timeout 1000 --delete "$source" "$destination""
 echo "\n🔄 Syncing Desktop..."
 $command --exclude unige-git --exclude miscellaneous-projects #| grep unige-git | grep miscellaneous-projects
 
-source=$HOME/Documents/
-destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
-echo "\n🔄 Syncing Documents..."
-$command
+# source=$HOME/Documents/
+# destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
+# echo "\n🔄 Syncing Documents..."
+# $command
 
-source=$HOME/Music/
-destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Music/
-echo "\n🔄 Syncing Music..."
-$command --exclude "Music"
+# source=$HOME/Music/
+# destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Music/
+# echo "\n🔄 Syncing Music..."
+# $command --exclude "Music"
 
-source=$HOME/Downloads/
-destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/
-echo "\n🔄 Syncing Downloads..."
-$command
+# source=$HOME/Downloads/
+# destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/
+# echo "\n🔄 Syncing Downloads..."
+# $command
 
 #$HOME/Desktop/AutoMac #$HOME/Desktop/calvino-git #$HOME/Desktop/iPhone-Shortcuts
 
