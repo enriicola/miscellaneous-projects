@@ -3,13 +3,17 @@
 #smartctl -a disk0 | grep "Data Units Written"
 
 # Initialize a command to be executed later
-command="rsync -avh --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --exclude "${excluded_folders[2]}" --delete --timeout 1000 "$source" "$destination" | grep 'err\|delete'"
+myrsync="rsync -avh --delete --timeout 1000 '$source' '$destination'"
+mygrep="grep 'err\|delete'"
+echo $command
 
 source=$HOME/Desktop/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
 excluded_folders=( 'unige-git' 'miscellaneous*' )
 echo "🔄 Syncing Desktop..."
-$command
+$myrsync --exclude="${excluded_folders[@]}" | $mygrep
+
+exit 0
 
 source=$HOME/Documents/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
@@ -42,7 +46,7 @@ echo $? > $HOME/Desktop/unige-git/status.txt
 brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
     # brctl download [FilePathHere]
     # brctl evict [FilePathHere]
-    
+
 # (find . -type f -exec brctl evict {} \;) | grep "Unable"
 
 
