@@ -4,7 +4,7 @@ if [ $# -eq 2 ]
     then
         path=$2
     else
-        path="$PWD"
+        path=$PWD
 fi
 
 echo "🔄 Syncing $path...\n"
