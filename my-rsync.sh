@@ -36,7 +36,7 @@
 ùgp rsync ~/Desktop/miscellaneous-projects
 # echo $? > $HOME/Desktop/miscellaneous-projects/my-git-push-status.txt
 
-# ùgp rsync ~/Desktop/unige-git
+ùgp rsync ~/Desktop/unige-git
 # echo $? > $HOME/Desktop/unige-git/my-git-push-status.txt
 
 
