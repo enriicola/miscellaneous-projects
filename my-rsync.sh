@@ -3,14 +3,10 @@
 #smartctl -a disk0 | grep "Data Units Written"
 
 source=$HOME/Desktop/
-destination="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
 excluded_folders=( 'unige-git' 'miscellaneous*' )
-exclude_opt=""
-for folder in "${excluded_folders[@]}"; do
-    exclude_opt+="--exclude $folder "
-done
 echo "\n🔄 RSyncing Desktop..."
-rsync -avhq --delete "$source" "$destination" $exclude_opt
+rsync -avhq --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --delete "$source" "$destination"
 
 source=$HOME/Documents/
 destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
