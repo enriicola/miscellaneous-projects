@@ -10,7 +10,7 @@ fi
 echo "\n\nùgp -> Syncing $path ...\n"
 
 echo Pulling...
-git -C $path pull
+git -C $path pull -q
 
 echo 
 echo Adding...

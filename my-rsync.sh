@@ -29,10 +29,10 @@ rsync -avhq --delete "$source" "$destination"
 
 #$HOME/Desktop/AutoMac #$HOME/Desktop/calvino-git #$HOME/Desktop/iPhone-Shortcuts
 
-ùgp "rsync" "$HOME/Desktop/miscellaneous-projects" > /dev/null
+ùgp "rsync" "$HOME/Desktop/miscellaneous-projects"
 # echo $? > $HOME/Desktop/miscellaneous-projects/my-git-push-status.txt
 
-ùgp "rsync" "$HOME/Desktop/unige-git" > /dev/null
+ùgp "rsync" "$HOME/Desktop/unige-git"
 # echo $? > $HOME/Desktop/unige-git/my-git-push-status.txt
 
 echo "\n💨 Evicting files from iCloud Drive..."
