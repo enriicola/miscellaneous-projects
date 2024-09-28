@@ -14,7 +14,7 @@ git -C $path pull
 
 echo 
 echo Adding...
-git -C $path add *
+git -C $path add $path
 
 if [ $# -eq 0 ]
     then
