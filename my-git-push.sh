@@ -29,7 +29,8 @@ git -C $path commit -am "$msg"
 
 # echo 'Enter the name of the branch:'
 # read branch
+# git -C $path branch $branch #origin $branch
 
 echo
 echo Pushing...
-git -C $path push #origin $branch
+git -C $path push
