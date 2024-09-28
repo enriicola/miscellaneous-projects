@@ -7,7 +7,7 @@ if [ $# -eq 2 ]
         path=$PWD
 fi
 
-echo "\n🕹️ nùgp $path ...\n"
+echo "\n🕹️ ùgp $path ...\n"
 
 echo Pulling...
 git -C $path pull

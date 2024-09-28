@@ -33,10 +33,10 @@
 
 #$HOME/Desktop/AutoMac #$HOME/Desktop/calvino-git #$HOME/Desktop/iPhone-Shortcuts
 
-ùgp rsync ~/Desktop/miscellaneous-projects
+ùgp rsync ~/Desktop/miscellaneous-projects > /dev/null
 # echo $? > $HOME/Desktop/miscellaneous-projects/my-git-push-status.txt
 
-ùgp rsync ~/Desktop/unige-git
+ùgp rsync ~/Desktop/unige-git > /dev/null
 # echo $? > $HOME/Desktop/unige-git/my-git-push-status.txt
 
 
