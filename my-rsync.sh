@@ -41,6 +41,7 @@
 
 
 #print final execution time and date
-echo "$(date)" > /Users/enrico/Library/Mobile\ Documents/com~apple~CloudDocs/last-sync.txt
+echo "$(date)" > ~/Library/Mobile\ Documents/com~apple~CloudDocs/last-sync.txt
+cp ~Library/Mobile\ Documents/com~apple~CloudDocs/last-sync.txt ~/last-sync.txt
 
 # osascript -e 'tell application "Terminal" to quit'
