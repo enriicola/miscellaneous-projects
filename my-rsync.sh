@@ -2,29 +2,29 @@
 
 #smartctl -a disk0 | grep "Data Units Written"
 
-# source=$HOME/Desktop/
-# destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
-# excluded_folders=( 'unige-git' 'miscellaneous*' )
-# echo "\n🔄 RSyncing Desktop..."
-# rsync -avhq --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --delete "$source" "$destination"
+source=$HOME/Desktop/
+destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Desktop/
+excluded_folders=( 'unige-git' 'miscellaneous*' )
+echo "\n🔄 RSyncing Desktop..."
+rsync -avhq --exclude "${excluded_folders[0]}" --exclude "${excluded_folders[1]}" --delete "$source" "$destination"
 
-# source=$HOME/Documents/
-# destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
-# echo "\n🔄 Syncing Documents..."
-# rsync -avhq --delete "$source" "$destination"
+source=$HOME/Documents/
+destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/
+echo "\n🔄 Syncing Documents..."
+rsync -avhq --delete "$source" "$destination"
 
-# source=$HOME/Music/
-# destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Music/
-# echo "\n🔄 RSyncing Music..."
-# rsync -avhq --delete "$source" "$destination" --exclude "Music"
+source=$HOME/Music/
+destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Music/
+echo "\n🔄 RSyncing Music..."
+rsync -avhq --delete "$source" "$destination" --exclude "Music"
 
-# source=$HOME/Downloads/
-# destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/
-# echo "\n🔄 RSyncing Downloads..."
-# rsync -avhq --delete "$source" "$destination"
+source=$HOME/Downloads/
+destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/
+echo "\n🔄 RSyncing Downloads..."
+rsync -avhq --delete "$source" "$destination"
 
-# echo "\n💨 Evicting files from iCloud Drive..."
-# brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/
+echo "\n💨 Evicting files from iCloud Drive..."
+brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/*
     # brctl download [FilePathHere]
 
 # (find . -type f -exec brctl evict {} \;) | grep "Unable"
