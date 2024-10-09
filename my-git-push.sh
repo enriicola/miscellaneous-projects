@@ -10,22 +10,22 @@ fi
 echo "\n🕹️ ùgp $path ...\n"
 
 echo Pulling...
-git -C $path pull
+git pull
 
 echo 
 echo Adding...
-git -C $path add -A
+git add -A
 
 if [ $# -eq 0 ]
     then
         msg="enrico's script push"
     else
-        msg="$1"
+        msg="$@"
 fi
 
 echo
 echo "Committing with message: $msg"
-git -C $path commit -am "$msg"
+git commit -am "$msg"
 
 # echo 'Enter the name of the branch:'
 # read branch
@@ -33,4 +33,4 @@ git -C $path commit -am "$msg"
 
 echo
 echo Pushing...
-git -C $path push
+git push

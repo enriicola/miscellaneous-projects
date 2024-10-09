@@ -33,11 +33,15 @@ brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/*
 
 #$HOME/Desktop/AutoMac #$HOME/Desktop/calvino-git #$HOME/Desktop/iPhone-Shortcuts
 
-ùgp rsync ~/Desktop/miscellaneous-projects > /dev/null
-# echo $? > $HOME/Desktop/miscellaneous-projects/my-git-push-status.txt
+git -C ~/Desktop/miscellaneous-projects pull -q
+git -C ~/Desktop/miscellaneous-projects add -Aq
+git -C ~/Desktop/miscellaneous-projects commit -am "rsync" -q
+git -C ~/Desktop/miscellaneous-projects push -q
 
-ùgp rsync ~/Desktop/unige-git > /dev/null
-# echo $? > $HOME/Desktop/unige-git/my-git-push-status.txt
+git -C ~/Desktop/unige-git pull -q
+git -C ~/Desktop/unige-git add -Aq
+git -C ~/Desktop/unige-git commit -am "rsync" -q
+git -C ~/Desktop/unige-git push -q
 
 
 #print final execution time and date
