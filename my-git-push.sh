@@ -1,13 +1,13 @@
 #!/usr/bin/zsh
 
-if [ $# -eq 2 ]
-    then
-        path=$2
-    else
-        path=$PWD
-fi
+# if [ $# -eq 2 ]
+#     then
+#         path=$2
+#     else
+#         path=$PWD
+# fi
 
-echo "\n🕹️ ùgp $path ...\n"
+# echo "\n🕹️ ùgp $path ...\n"
 
 echo Pulling...
 git pull

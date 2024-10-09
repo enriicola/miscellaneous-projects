@@ -34,7 +34,7 @@ echo "\n🔄 Syncing GitHub repos..."
 #$HOME/Desktop/AutoMac #$HOME/Desktop/calvino-git #$HOME/Desktop/iPhone-Shortcuts
 
 git -C ~/Desktop/miscellaneous-projects pull -q
-git -C ~/Desktop/miscellaneous-projects add -Aq
+git -C ~/Desktop/miscellaneous-projects add -A -q
 git -C ~/Desktop/miscellaneous-projects commit -am "rsync" -q
 git -C ~/Desktop/miscellaneous-projects push -q
 
