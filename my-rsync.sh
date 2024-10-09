@@ -30,7 +30,7 @@ brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/*
 # (find . -type f -exec brctl evict {} \;) | grep "Unable"
 
 
-
+echo "\n🔄 Syncing GitHub repos..."
 #$HOME/Desktop/AutoMac #$HOME/Desktop/calvino-git #$HOME/Desktop/iPhone-Shortcuts
 
 git -C ~/Desktop/miscellaneous-projects pull -q
