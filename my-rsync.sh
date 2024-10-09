@@ -34,12 +34,12 @@ echo "\n🔄 Syncing GitHub repos..."
 #$HOME/Desktop/AutoMac #$HOME/Desktop/calvino-git #$HOME/Desktop/iPhone-Shortcuts
 
 git -C ~/Desktop/miscellaneous-projects pull -q
-git -C ~/Desktop/miscellaneous-projects add -A -q
+git -C ~/Desktop/miscellaneous-projects add -A > /dev/null
 git -C ~/Desktop/miscellaneous-projects commit -am "rsync" -q
 git -C ~/Desktop/miscellaneous-projects push -q
 
 git -C ~/Desktop/unige-git pull -q
-git -C ~/Desktop/unige-git add -Aq
+git -C ~/Desktop/unige-git add -A > /dev/null
 git -C ~/Desktop/unige-git commit -am "rsync" -q
 git -C ~/Desktop/unige-git push -q
 
