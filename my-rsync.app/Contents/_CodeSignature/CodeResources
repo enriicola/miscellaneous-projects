@@ -6,15 +6,15 @@
 	<dict>
 		<key>Resources/ApplicationStub.icns</key>
 		<data>
-		RYTqh+7iocnEIV8iTs9EgJjEkO4=
+		Iesgajuc64cKzYTIUIahzVwDMy0=
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		vxTilFqAB+O3GmDzaaZ4sC4KOc8=
+		NKezjwfplh90gUMauv0ARIFt7sg=
 		</data>
 		<key>Resources/InfoPlist.loctable</key>
 		<data>
-		71fUaDHmKoEjKlKkMLLNl4Pivgg=
+		KEQC0DFC9lrETWe0E5eVGGsPylc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -23,43 +23,43 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RYTqh+7iocnEIV8iTs9EgJjEkO4=
+			Iesgajuc64cKzYTIUIahzVwDMy0=
 			</data>
 			<key>hash2</key>
 			<data>
-			odOqeBevxysHIbR5V5qgZz11qTuV9cL5jKaIcUw3R0I=
+			PKt4NETj6olqhwTHWTduTBP4IK0GMmaOC5FTT+lita4=
 			</data>
 		</dict>
 		<key>Resources/Assets.car</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vxTilFqAB+O3GmDzaaZ4sC4KOc8=
+			NKezjwfplh90gUMauv0ARIFt7sg=
 			</data>
 			<key>hash2</key>
 			<data>
-			loZYiR+L7KjdFTLRaMr2+A0KvuTemvnXuTSxGTmfbes=
+			QrN3+nW34nauxw+1inMwWa8rHcFGGXdOQYxI+EtS68k=
 			</data>
 		</dict>
 		<key>Resources/InfoPlist.loctable</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			71fUaDHmKoEjKlKkMLLNl4Pivgg=
+			KEQC0DFC9lrETWe0E5eVGGsPylc=
 			</data>
 			<key>hash2</key>
 			<data>
-			tyC+7QMvGJZKI4nDnLOsiKfB+pRASNJx8BuCkMwIJj4=
+			3cSIcj64rHY2k+pLrnrgd1Li6hmbquwgX94QcefajJ8=
 			</data>
 		</dict>
 		<key>document.wflow</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			QBJd/eWi+eGWI0/b4pulmRX2Y80=
+			mM+mm2202/Xa70oHCWIdPGvnDys=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"2461a18b81acb8f08c9e5e423d94e414f1ff732e" or cdhash H"40125dfde5a2f9e196234fdbe29ba59915f663cd"</string>
+			<string>cdhash H"ea07d1e419ffc6a9e8e8e52be67e8dbca4d36f86" or cdhash H"98cfa69b6db4dbf5daef4a0709621d3c6be70f2b"</string>
 		</dict>
 	</dict>
 	<key>rules</key>

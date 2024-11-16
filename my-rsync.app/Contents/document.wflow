@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>523</string>
+	<string>526</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -85,7 +85,7 @@ sh /Users/enrico/Desktop/miscellaneous-projects/my-rsync.sh</string>
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>C66418FE-53B0-4D90-9C09-CE8C3E15023A</string>
+				<string>972ADE34-3B0C-42BE-A844-19810BC19602</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -95,9 +95,9 @@ sh /Users/enrico/Desktop/miscellaneous-projects/my-rsync.sh</string>
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>CD839BDF-F1F5-4C56-AF11-8BDE4E98021E</string>
+				<string>1B08986F-962D-4281-9BA4-31578249D59C</string>
 				<key>UUID</key>
-				<string>00E6EC47-FE5B-4B25-8885-AEA77E603ACB</string>
+				<string>54DBF89A-3D9A-43CA-B6BE-5713CDABE0F5</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -170,10 +170,12 @@ sh /Users/enrico/Desktop/miscellaneous-projects/my-rsync.sh</string>
 						<string>4</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>321.000000:252.000000</string>
+				<string>223.000000:252.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
