@@ -23,8 +23,8 @@ destination=$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads/
 echo "\n🔄 RSyncing Downloads..."
 rsync -avhq --delete "$source" "$destination"
 
-echo "\n💨 Evicting files from iCloud Drive..."
-brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/*
+# echo "\n💨 Evicting files from iCloud Drive..."
+# brctl evict $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/*
     # brctl download [FilePathHere]
 
 # (find . -type f -exec brctl evict {} \;) | grep "Unable"
